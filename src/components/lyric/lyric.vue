@@ -13,9 +13,9 @@
       <template v-else>
         <dd>虹色轨迹🌠在线音乐播放器</dd>
         <dd>
-          <a class="hover" target="_blank" href="https://github.com/maomao1996">
+          <a class="hover" target="_blank" href="https://github.com/ZhuangRenyang">
             <mm-icon type="github" :size="14" />
-            &nbsp;虹色轨迹🌠
+            虹色轨迹🌠
           </a>
         </dd>
       </template>
