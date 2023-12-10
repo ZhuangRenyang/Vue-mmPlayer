@@ -33,7 +33,7 @@ export default {
   },
   created() {
     // 设置版本更新信息
-    this.versionInfo = VERSION_INFO
+    //this.versionInfo = VERSION_INFO
 
     // 获取正在播放列表
     getPlaylistDetail(MMPLAYER_CONFIG.PLAYLIST_ID).then((playlist) => {
