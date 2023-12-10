@@ -1,15 +1,8 @@
 # mmPlayer
 
-> mmPlayer 是由茂茂开源的一款在线音乐播放器，具有音乐搜索、播放、歌词显示、播放历史、查看歌曲评论、网易云用户歌单播放同步等功能
-
 模仿 QQ 音乐网页版界面，采用 `flexbox` 和 `position` 布局；<br />
 mmPlayer 虽然是响应式，但主要以 PC 端为主，移动端只做相应适配；<br />
 只做主流浏览器兼容（对 IE 说拜拜，想想以前做项目还要兼容 IE7 ，都是泪啊！！！）
-
-- [在线演示地址](https://netease-music.fe-mm.com/)
-- [React 移动端版本（高仿网易云音乐）](https://github.com/maomao1996/react-music)
-- [交流 QQ 群：529940193](http://shang.qq.com/wpa/qunwpa?idkey=f8be1b627a89108ccfda9308720d2a4d0eb3306f253c5d3e8d58452e20b91129) 本群不解答部署相关问题，如有部署问题请看[关于项目线上部署](#关于项目线上部署)
-- 本播放器由 **[茂茂](https://github.com/maomao1996) 开发**，您可以随意修改、使用、转载。但**使用或转载时请务必保留出处（控制台的注释信息）**！！！
 
 ## 免责声明
 
@@ -38,7 +31,6 @@ node -v
 
 ```sh
 # 下载 mmPlayer
-git clone https://github.com/maomao1996/Vue-mmPlayer
 
 # 进入 mmPlayer 播放器目录
 cd Vue-mmPlayer
@@ -80,21 +72,6 @@ node app.js
 **项目打包前 `VUE_APP_BASE_API_URL` 必须改后台 `api` 服务地址为线上地址，不能是本地地址**
 
 ### 关于项目线上部署
-
-最近有不少小伙伴部署出了问题，我在这说明下
-
-- 后台 `api` 服务线上部署
-  - 你需要将 [NeteaseCloudMusicApi](https://github.com/Binaryify/NeteaseCloudMusicApi) 下载
-  - 然后将下载的文件上传至服务器
-  - 再通过 `pm2` 去启动服务(`pm2` 安装和相关命令网上有很多，这里不再赘述)
-  - 最后通过服务器 `ip` + 端口号访问验证 `api` 服务是否启动成功
-- `mmPlayer` 线上部署（推荐使用 [Vercel 部署](#vercel-部署)）
-  - 首先要注意的是
-  - 先将 `.env` 文件的 `VUE_APP_BASE_API_URL` 修改成上一步启动的后台 `api` 服务地址(服务器 `ip` + 端口号或者你绑定的域名)
-  - 然后先在本地运行 `npm run build` 命令，会打包在生成一个 `dist` 文件
-  - 最后将打包的 `dist` 文件上传到你的网站服务器目录即可
-- 其他：[在宝塔面板部署 mmPlayer](https://github.com/maomao1996/Blog/issues/1)（不喜欢写文，可能有点烂不要介意哈）
-- 最后：本人已和谷歌、百度达成合作了，如果还有啥不懂的，以后可以直接谷歌、百度
 
 #### Vercel 部署
 
