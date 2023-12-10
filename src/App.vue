@@ -62,28 +62,28 @@ export default {
     })
 
     // 首次加载完成后移除动画
-    // let loadDOM = document.querySelector('#appLoading')
-    // if (loadDOM) {
-    //   const animationendFunc = function () {
-    //     loadDOM.removeEventListener('animationend', animationendFunc)
-    //     loadDOM.removeEventListener('webkitAnimationEnd', animationendFunc)
-    //     document.body.removeChild(loadDOM)
-    //     loadDOM = null
-    //     const version = getVersion()
-    //     if (version !== null) {
-    //       setVersion(VERSION)
-    //       if (version !== VERSION) {
-    //         this.$refs.versionDialog.show()
-    //       }
-    //     } else {
-    //       setVersion(VERSION)
-    //       this.$refs.versionDialog.show()
-    //     }
-    //   }.bind(this)
-    //   loadDOM.addEventListener('animationend', animationendFunc)
-    //   loadDOM.addEventListener('webkitAnimationEnd', animationendFunc)
-    //   loadDOM.classList.add('removeAnimate')
-    // }
+    let loadDOM = document.querySelector('#appLoading')
+    if (loadDOM) {
+      const animationendFunc = function () {
+        loadDOM.removeEventListener('animationend', animationendFunc)
+        loadDOM.removeEventListener('webkitAnimationEnd', animationendFunc)
+        document.body.removeChild(loadDOM)
+        loadDOM = null
+        const version = getVersion()
+        if (version !== null) {
+          setVersion(VERSION)
+          if (version !== VERSION) {
+            this.$refs.versionDialog.show()
+          }
+        } else {
+          setVersion(VERSION)
+          this.$refs.versionDialog.show()
+        }
+      }.bind(this)
+      loadDOM.addEventListener('animationend', animationendFunc)
+      loadDOM.addEventListener('webkitAnimationEnd', animationendFunc)
+      loadDOM.classList.add('removeAnimate')
+    }
   },
   methods: {
     ...mapMutations({
