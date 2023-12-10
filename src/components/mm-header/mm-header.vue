@@ -145,7 +145,7 @@ export default {
         creator.avatarUrl = toHttps(creator.avatarUrl)
         this.user = creator
         setTimeout(() => {
-          this.$mmToast(`${this.user.nickname} 欢迎使用 mmPlayer`)
+          this.$mmToast(`${this.user.nickname} 欢迎使用 虹色轨迹🌠`)
         }, 200)
       })
     },
