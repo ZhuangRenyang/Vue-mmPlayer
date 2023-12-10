@@ -2,7 +2,7 @@
   <!--头部-->
   <header class="mm-header">
     <h1 class="header">
-      <a href="https://github.com/ZhuangRenyang/Vue-mmPlayer" target="_blank">
+      <a href="" target="_blank">
         虹色轨迹🌠 在线音乐播放器
       </a>
       <img
