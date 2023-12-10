@@ -18,12 +18,12 @@ import MmHeader from 'components/mm-header/mm-header'
 import MmDialog from 'base/mm-dialog/mm-dialog'
 import { getVersion, setVersion } from '@/utils/storage'
 
-// const VERSION_INFO = `<div class="mm-dialog-text text-left">
-// 版本号：${VERSION}（${process.env.VUE_APP_UPDATE_TIME}）<br/>
-// 1、 采用新版图标<br>
-// 2、 修复音乐搜索<br>
-// 3、 优化滚动条样式
-// </div>`
+const VERSION_INFO = `<div class="mm-dialog-text text-left">
+版本号：${VERSION}（${process.env.VUE_APP_UPDATE_TIME}）<br/>
+1、 采用新版图标<br>
+2、 修复音乐搜索<br>
+3、 优化滚动条样式
+</div>`
 
 export default {
   name: 'App',
