@@ -4,7 +4,7 @@
     <mm-header />
     <router-view />
     <!--更新说明-->
-    <mm-dialog ref="versionDialog" type="alert" head-text="更新提示" :body-text="versionInfo" />
+<!--    <mm-dialog ref="versionDialog" type="alert" head-text="更新提示" :body-text="versionInfo" />-->
     <!--播放器-->
     <audio ref="mmPlayer"></audio>
   </div>
@@ -29,7 +29,7 @@ export default {
   name: 'App',
   components: {
     MmHeader,
-    MmDialog,
+    // MmDialog,更新提示
   },
   created() {
     // 设置版本更新信息
@@ -62,28 +62,28 @@ export default {
     })
 
     // 首次加载完成后移除动画
-    let loadDOM = document.querySelector('#appLoading')
-    if (loadDOM) {
-      const animationendFunc = function () {
-        loadDOM.removeEventListener('animationend', animationendFunc)
-        loadDOM.removeEventListener('webkitAnimationEnd', animationendFunc)
-        document.body.removeChild(loadDOM)
-        loadDOM = null
-        const version = getVersion()
-        if (version !== null) {
-          setVersion(VERSION)
-          if (version !== VERSION) {
-            this.$refs.versionDialog.show()
-          }
-        } else {
-          setVersion(VERSION)
-          this.$refs.versionDialog.show()
-        }
-      }.bind(this)
-      loadDOM.addEventListener('animationend', animationendFunc)
-      loadDOM.addEventListener('webkitAnimationEnd', animationendFunc)
-      loadDOM.classList.add('removeAnimate')
-    }
+    // let loadDOM = document.querySelector('#appLoading')
+    // if (loadDOM) {
+    //   const animationendFunc = function () {
+    //     loadDOM.removeEventListener('animationend', animationendFunc)
+    //     loadDOM.removeEventListener('webkitAnimationEnd', animationendFunc)
+    //     document.body.removeChild(loadDOM)
+    //     loadDOM = null
+    //     const version = getVersion()
+    //     if (version !== null) {
+    //       setVersion(VERSION)
+    //       if (version !== VERSION) {
+    //         this.$refs.versionDialog.show()
+    //       }
+    //     } else {
+    //       setVersion(VERSION)
+    //       this.$refs.versionDialog.show()
+    //     }
+    //   }.bind(this)
+    //   loadDOM.addEventListener('animationend', animationendFunc)
+    //   loadDOM.addEventListener('webkitAnimationEnd', animationendFunc)
+    //   loadDOM.classList.add('removeAnimate')
+    // }
   },
   methods: {
     ...mapMutations({
