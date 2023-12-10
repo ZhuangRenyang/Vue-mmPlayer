@@ -524,7 +524,7 @@ export default {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50%;
-    filter: blur(12px);
+    filter: blur(0px);
     opacity: 1;
     transition: all 0.8s;
     transform: scale(1.1);
